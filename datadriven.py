@@ -1,5 +1,4 @@
 import openpyxl
-import xlOperation
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -10,11 +9,8 @@ driver.implicitly_wait(5)
 driver.get(r"https://www.amazon.in/")
 driver.maximize_window()
 driver.implicitly_wait(10)
-path =r"C:\Users\Admin\OneDrive\Desktop\report.xlsx"
 
-rows = xlOperation.getRowCount(path, "Sheet1")
-
-    # perform or read the value from excel file and pass to application
+# perform or read the value from excel file and pass to application
 wb = openpyxl.load_workbook(r"C:\Users\Admin\OneDrive\Desktop\report.xlsx")
 sheet = wb.active
 x1 = sheet['B1'].value
